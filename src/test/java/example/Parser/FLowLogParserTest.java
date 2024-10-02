@@ -76,6 +76,7 @@ public class FLowLogParserTest {
     }
 
     @Test
+    @DisplayName("Test Case no 3")
     public void testCase3_EmptyLookupTable() throws IOException {
         FlowLogParser processor = new FlowLogParser();
 
@@ -95,6 +96,7 @@ public class FLowLogParserTest {
         processor.generateReport("src/test/resources/Testcase3/outputfile_test_3.csv");
     }
     @Test
+    @DisplayName("Test Case no 4")
     public void testCase4_ICMPProtocol() throws IOException {
         FlowLogParser processor = new FlowLogParser();
 
@@ -118,6 +120,7 @@ public class FLowLogParserTest {
     }
 
     @Test
+    @DisplayName("Test Case no 5")
     public void testCase5_UnlistedPortsInLookupTable() throws IOException {
         FlowLogParser processor = new FlowLogParser();
 
@@ -138,6 +141,7 @@ public class FLowLogParserTest {
     }
 
     @Test
+    @DisplayName("Test Case no 6")
     public void testCase6_DuplicateEntries() throws IOException {
         FlowLogParser processor = new FlowLogParser();
 
@@ -157,6 +161,7 @@ public class FLowLogParserTest {
     }
 
     @Test
+    @DisplayName("Test Case no 7")
     public void testCase7_isCorrectVersion() throws IOException {
         FlowLogParser processor = new FlowLogParser();
 

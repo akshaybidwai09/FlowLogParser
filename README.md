@@ -46,8 +46,60 @@ Here’s the current project structure:
 
 
 
-## **How to Run the Project ?**
-Main code is written in FlowLogParser.Java File here is the path - (org/example/Parser/LookupTableEntry.java) 
+## **How to Run the Project**
 
-Steps are given below.
+---
 
+### **2. Jump into the Test Class:**
+
+The test cases for the project are written in the `FLowLogParserTest.java` file located at:
+
+```
+src/test/java/example/Parser/FLowLogParserTest.java
+```
+
+You can simply click the **Run** button (the green play button) in the top right corner of your IDE to execute the test cases.
+
+---
+
+### **3. Run Tests via Terminal:**
+
+Alternatively, you can run the tests using Maven from the terminal by running the following command:
+
+```bash
+mvn test
+```
+
+---
+
+### **4. Test Results:**
+
+After running the tests, reports will be generated and saved in the respective `outputfile_test_*.csv` files located in:
+
+```
+src/test/resources/Testcase*/outputfile_test_*.csv
+```
+
+---
+### **5. Add Additional Test Cases:**
+
+To add additional test cases, follow these steps:
+
+1. **Navigate to the directory:**
+
+   ```
+   src/test/resources/Testcase
+   ```
+
+   2. **Add two files:**
+       - A **TXT file** that contains the flow log entries.
+       - A **CSV file** that contains the lookup table.
+
+   3. **Write the test case:**
+       - Open `FLowLogParserTest.java`.
+       - Write a new test function that uses the new files.
+
+   4. **Run the test:**
+       - After adding the new test case, run it using your IDE or via the terminal with `mvn test`.
+
+---

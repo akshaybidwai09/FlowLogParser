@@ -62,7 +62,12 @@ Here’s the current project structure:
 - Please note that flowlog file must be .txt and lookup table must be CSV
 ![Input and Output File](src/main/resources/Images/InputandOutput.png)
 
+## **Flow Log Format**
 
+---
+Format for Log flow entries
+
+![Log Format](src/main/resources/Images/LogFormat.png)
 
 ## **How to Run the Project**
 

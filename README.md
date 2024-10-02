@@ -29,7 +29,7 @@ The parser supports the **default flow log format** and **only supports version 
 
 ## **Potential Error Encounter**
 
-In reviewing the provided sample test case and its expected output, I identified a few discrepancies that need to be corrected:
+In reviewing the provided sample test case and its expected output over Email, I identified a few discrepancies that need to be corrected:
 
 Tag Count Error:
 
@@ -40,6 +40,7 @@ The total number of Untagged entries is 8, but the output incorrectly states it 
 Missing Port/Protocol Combinations:
 
 Several Port/Protocol combinations are missing from the provided output. After carefully reviewing the flow log entries, I corrected the output to reflect all the port/protocol combinations.
+
 I have implemented these corrections in the first test case, as shown in the test([FLowLogParserTest.java](src%2Ftest%2Fjava%2Fexample%2FParser%2FFLowLogParserTest.java)) file.
 
 

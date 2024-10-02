@@ -1,0 +1,11 @@
+Tag Counts:
+Tag,Count
+sv_p2,2
+sv_p1,2
+sv_p4,1
+
+Port/Protocol Combination Counts:
+Port,Protocol,Count
+443,tcp,2
+80,tcp,2
+22,tcp,1

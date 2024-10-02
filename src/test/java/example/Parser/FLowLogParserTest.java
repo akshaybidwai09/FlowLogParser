@@ -149,7 +149,6 @@ public class FLowLogParserTest {
         assertEquals(2, processor.getTagCount().getOrDefault("sv_p1", 0).intValue());
         assertEquals(1, processor.getTagCount().getOrDefault("sv_p4", 0).intValue());
 
-        // Check port/protocol counts
         assertEquals(2, processor.getPortProtocolCount().getOrDefault("443-tcp", 0).intValue());
         assertEquals(2, processor.getPortProtocolCount().getOrDefault("80-tcp", 0).intValue());
         assertEquals(1, processor.getPortProtocolCount().getOrDefault("22-tcp", 0).intValue());

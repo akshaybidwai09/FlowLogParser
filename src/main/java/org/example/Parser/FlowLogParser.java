@@ -27,6 +27,15 @@ public class FlowLogParser {
 
     public void loadLookUpTable(String lookupFilePath) throws IOException {
 
+        /**
+         * This method loads the lookup table from a CSV file, parses each line,
+         * and creates Java objects (LookupTableEntry) for each valid row in the CSV.
+         * These objects are then stored in a map for later use.
+         *
+         * @param lookupFilePath the path to the lookup table CSV file
+         * @throws IOException if there is an issue reading the file
+         */
+
         logger.info("Loading lookup table from CSV file: {}", lookupFilePath);
 
         try (BufferedReader reader = Files.newBufferedReader(Paths.get(lookupFilePath))) {
@@ -67,6 +76,8 @@ public class FlowLogParser {
         }
 
         logger.info("Processing flow log file: {}", flowLogFilePath);
+
+
         try (BufferedReader reader = Files.newBufferedReader(filePath)) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -76,6 +87,10 @@ public class FlowLogParser {
     }
 
     private void processFlowLogEntry(String logEntry) {
+        /**
+         *  THis code parse the LogFlow file line by line below and store the dst port and protocol
+         *  type and check if the tag is present for storing the count tags further.
+         * */
         String[] columns = logEntry.split(" ");
         if (columns.length < 13) {
             logger.warn("Malformed flow log entry skipped: {}", logEntry);
@@ -126,6 +141,10 @@ public class FlowLogParser {
     }
 
     public void generateReport(String outputFilePath) throws IOException {
+
+        /**
+         * Generates the CSV file and populate the Match count of Tags and and DST Pot and protocol count
+         * */
         logger.info("Generating report to file: {}", outputFilePath);
         try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(outputFilePath))) {
 

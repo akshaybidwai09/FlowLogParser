@@ -50,7 +50,7 @@ Here’s the current project structure:
 
 ---
 
-### **2. Jump into the Test Class:**
+### **1. Jump into the Test Class:**
 
 The test cases for the project are written in the `FLowLogParserTest.java` file located at:
 
